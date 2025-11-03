@@ -21,6 +21,14 @@ public class Usuário {
         System.out.println("Informe o valor do multiplicador final: ");
         multiplicadorFinal = leitor.nextInt();
 
+        verificarMultiplicadores();
+    }
+    public void verificarMultiplicadores(){
+        if (multiplicadorInicial > multiplicadorFinal){
+            temporario = multiplicadorInicial;
+            multiplicadorInicial = multiplicadorFinal;
+            multiplicadorFinal = temporario;
+        }
     }
 
 }
