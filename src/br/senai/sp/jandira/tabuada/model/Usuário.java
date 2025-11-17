@@ -41,8 +41,9 @@ public class Usuário {
             multiplicadorInicial++;
             i = i + 1;
 
-            exibirTabuada();
+
         }
+        exibirTabuada();
     }
     public void exibirTabuada(){
         System.out.println("Resultado da sua tabuada:");
