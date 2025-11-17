@@ -2,7 +2,7 @@ package br.senai.sp.jandira.tabuada.model;
 
 import java.util.Scanner;
 
-public class Usuário {
+public class Usuario {
     int multiplicando;
     int multiplicadorInicial;
     int multiplicadorFinal;
