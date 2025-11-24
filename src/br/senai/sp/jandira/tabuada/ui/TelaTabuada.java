@@ -4,10 +4,7 @@ import br.senai.sp.jandira.tabuada.model.Usuario;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -19,6 +16,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 public class TelaTabuada extends Application {
 
@@ -172,7 +170,12 @@ public class TelaTabuada extends Application {
             tfMultiplicando.requestFocus();
         });
         btSair.setOnAction(e -> {
+            Alert alerta = new Alert(Alert.AlertType.CONFIRMATION, "Sair da calculadora de tabuadas?", ButtonType.YES, ButtonType.NO);
+            Optional<ButtonType> resposta = alerta.showAndWait();
 
+            if (resposta.get() == ButtonType.YES) {
+                System.exit(0);
+            }
         });
     }
 }
